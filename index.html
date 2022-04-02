@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Game</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin-top: 0;
+        overflow-y: hidden;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .player_health,
+    .enemy_health {
+        /* background-color: yellow; */
+        border: 2px solid yellowgreen;
+        height: 30px;
+        /* width: 45%; */
+    }
+
+    .container {
+        position: relative;
+        /* top: -8px; */
+    }
+
+    .container2 {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .timer {
+        /* background-color: red; */
+        border: 3px solid grey;
+        color: white;
+        font: 30px sans-serif;
+        height: 80px;
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .result {
+        position: absolute;
+        color: white;
+        font: 100 50px sans-serif;
+        letter-spacing: 5px;
+        display: none; 
+        align-items: center;
+        justify-content: center;
+        inset: 0;
+    }
+</style>
+
+<body>
+    <!-- red container div -->
+    <div class="container">
+        <div class="container2">
+            <!-- player health -->
+            <div style="width: 100%;position: relative;">
+            <div class="player_health" style="width: 100%;"></div>
+            <div id="playerHealth" style="position:absolute; background:rgba(255, 0, 0, 0.596); top: 0;bottom: 0; right: 0; width: 100%;"></div>
+            </div>
+            <!-- timer -->
+            <div id="timer" class="timer">10</div>
+            <!-- enemy health -->
+            <div style="width: 100%;position: relative;">
+                <div  class="enemy_health" style="width: 100%;"></div>
+                <div id="enemyHealth" style="position:absolute; background: rgba(0, 0, 255, 0.644); top: 0;bottom: 0; left: 0; right: 0;"></div>
+            </div>
+        </div>
+        <div id="result" class="result"></div>
+        <canvas></canvas>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
